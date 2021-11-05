@@ -143,7 +143,6 @@ if __name__ == "__main__":
     # name = f"{representation}_s_wallace_cska{N}"
     # circuit = SignedWallaceMultiplier(a, b, prefix=name, unsigned_adder_class_name=UnsignedCarrySkipAdder)
     # circuit.get_v_code_hier(open(f"{directory}/{name}.v", "w"))
-    exit()
     # Dadda
     dir = directory + '/Dadda'
     os.makedirs(dir,exist_ok=True)
