@@ -9,3 +9,5 @@ Makefile
 *__pycache__*
 *.xml
 *.iml
+*.tcl
+*.v
