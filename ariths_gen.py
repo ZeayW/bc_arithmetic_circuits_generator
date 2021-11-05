@@ -99,18 +99,20 @@ if __name__ == "__main__":
     # circuit.get_v_code_hier(open(f"{directory}/{name}.v", "w"))
     #
     # # Arrmul
-    # name = f"{representation}_u_arrmul{N}"
-    # circuit = UnsignedArrayMultiplier(a, b, prefix=name)
-    # circuit.get_v_code_hier(open(f"{directory}/{name}.v", "w"))
+        dir = directory + '/Arr'
+    name = f"{representation}_u_arrmul{N}"
+    circuit = UnsignedArrayMultiplier(a, b, prefix=name)
+    circuit.get_v_code_hier(open(f"{dir}/{name}.v", "w"))
     #
     # name = f"{representation}_s_arrmul{N}"
     # circuit = SignedArrayMultiplier(a, b, prefix=name)
     # circuit.get_v_code_hier(open(f"{directory}/{name}.v", "w"))
 
     # Wallace
+    dir = directory+'/Wallace'
     name = f"{representation}_u_wallace_cla{N}"
     circuit = UnsignedWallaceMultiplier(a, b, prefix=name, unsigned_adder_class_name=UnsignedCarryLookaheadAdder)
-    circuit.get_v_code_hier(open(f"{directory}/{name}.v", "w"))
+    circuit.get_v_code_hier(open(f"{dir}/{name}.v", "w"))
 
     # name = f"{representation}_s_wallace_cla{N}"
     # circuit = SignedWallaceMultiplier(a, b, prefix=name, unsigned_adder_class_name=UnsignedCarryLookaheadAdder)
@@ -118,7 +120,7 @@ if __name__ == "__main__":
 
     name = f"{representation}_u_wallace_rca{N}"
     circuit = UnsignedWallaceMultiplier(a, b, prefix=name, unsigned_adder_class_name=UnsignedRippleCarryAdder)
-    circuit.get_v_code_hier(open(f"{directory}/{name}.v", "w"))
+    circuit.get_v_code_hier(open(f"{dir}/{name}.v", "w"))
 
     # name = f"{representation}_s_wallace_rca{N}"
     # circuit = SignedWallaceMultiplier(a, b, prefix=name, unsigned_adder_class_name=UnsignedRippleCarryAdder)
@@ -126,7 +128,7 @@ if __name__ == "__main__":
 
     name = f"{representation}_u_wallace_pg_rca{N}"
     circuit = UnsignedWallaceMultiplier(a, b, prefix=name, unsigned_adder_class_name=UnsignedPGRippleCarryAdder)
-    circuit.get_v_code_hier(open(f"{directory}/{name}.v", "w"))
+    circuit.get_v_code_hier(open(f"{dir}/{name}.v", "w"))
 
     # name = f"{representation}_s_wallace_pg_rca{N}"
     # circuit = SignedWallaceMultiplier(a, b, prefix=name, unsigned_adder_class_name=UnsignedPGRippleCarryAdder)
@@ -134,44 +136,45 @@ if __name__ == "__main__":
 
     name = f"{representation}_u_wallace_cska{N}"
     circuit = UnsignedWallaceMultiplier(a, b, prefix=name, unsigned_adder_class_name=UnsignedCarrySkipAdder)
-    circuit.get_v_code_hier(open(f"{directory}/{name}.v", "w"))
+    circuit.get_v_code_hier(open(f"{dir}/{name}.v", "w"))
 
     # name = f"{representation}_s_wallace_cska{N}"
     # circuit = SignedWallaceMultiplier(a, b, prefix=name, unsigned_adder_class_name=UnsignedCarrySkipAdder)
     # circuit.get_v_code_hier(open(f"{directory}/{name}.v", "w"))
     exit()
     # Dadda
+    dir = directory + '/Dadda'
     name = f"{representation}_u_dadda_cla{N}"
     circuit = UnsignedDaddaMultiplier(a, b, prefix=name, unsigned_adder_class_name=UnsignedCarryLookaheadAdder)
-    circuit.get_v_code_hier(open(f"{directory}/{name}.v", "w"))
+    circuit.get_v_code_hier(open(f"{dir}/{name}.v", "w"))
 
-    name = f"{representation}_s_dadda_cla{N}"
-    circuit = SignedDaddaMultiplier(a, b, prefix=name, unsigned_adder_class_name=UnsignedCarryLookaheadAdder)
-    circuit.get_v_code_hier(open(f"{directory}/{name}.v", "w"))
+    # name = f"{representation}_s_dadda_cla{N}"
+    # circuit = SignedDaddaMultiplier(a, b, prefix=name, unsigned_adder_class_name=UnsignedCarryLookaheadAdder)
+    # circuit.get_v_code_hier(open(f"{directory}/{name}.v", "w"))
 
     name = f"{representation}_u_dadda_rca{N}"
     circuit = UnsignedDaddaMultiplier(a, b, prefix=name, unsigned_adder_class_name=UnsignedRippleCarryAdder)
-    circuit.get_v_code_hier(open(f"{directory}/{name}.v", "w"))
+    circuit.get_v_code_hier(open(f"{dir}/{name}.v", "w"))
 
-    name = f"{representation}_s_dadda_rca{N}"
-    circuit = SignedDaddaMultiplier(a, b, prefix=name, unsigned_adder_class_name=UnsignedRippleCarryAdder)
-    circuit.get_v_code_hier(open(f"{directory}/{name}.v", "w"))
+    # name = f"{representation}_s_dadda_rca{N}"
+    # circuit = SignedDaddaMultiplier(a, b, prefix=name, unsigned_adder_class_name=UnsignedRippleCarryAdder)
+    # circuit.get_v_code_hier(open(f"{directory}/{name}.v", "w"))
 
     name = f"{representation}_u_dadda_pg_rca{N}"
     circuit = UnsignedDaddaMultiplier(a, b, prefix=name, unsigned_adder_class_name=UnsignedPGRippleCarryAdder)
-    circuit.get_v_code_hier(open(f"{directory}/{name}.v", "w"))
+    circuit.get_v_code_hier(open(f"{dir}/{name}.v", "w"))
 
-    name = f"{representation}_s_dadda_pg_rca{N}"
-    circuit = SignedDaddaMultiplier(a, b, prefix=name, unsigned_adder_class_name=UnsignedPGRippleCarryAdder)
-    circuit.get_v_code_hier(open(f"{directory}/{name}.v", "w"))
+    # name = f"{representation}_s_dadda_pg_rca{N}"
+    # circuit = SignedDaddaMultiplier(a, b, prefix=name, unsigned_adder_class_name=UnsignedPGRippleCarryAdder)
+    # circuit.get_v_code_hier(open(f"{directory}/{name}.v", "w"))
 
     name = f"{representation}_u_dadda_cska{N}"
     circuit = UnsignedDaddaMultiplier(a, b, prefix=name, unsigned_adder_class_name=UnsignedCarrySkipAdder)
-    circuit.get_v_code_hier(open(f"{directory}/{name}.v", "w"))
+    circuit.get_v_code_hier(open(f"{dir}/{name}.v", "w"))
 
-    name = f"{representation}_s_dadda_cska{N}"
-    circuit = SignedDaddaMultiplier(a, b, prefix=name, unsigned_adder_class_name=UnsignedCarrySkipAdder)
-    circuit.get_v_code_hier(open(f"{directory}/{name}.v", "w"))
+    # name = f"{representation}_s_dadda_cska{N}"
+    # circuit = SignedDaddaMultiplier(a, b, prefix=name, unsigned_adder_class_name=UnsignedCarrySkipAdder)
+    # circuit.get_v_code_hier(open(f"{directory}/{name}.v", "w"))
 
     # Arrdiv
     name = f"{representation}_arrdiv{N}"
