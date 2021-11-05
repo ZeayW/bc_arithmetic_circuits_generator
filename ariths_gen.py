@@ -100,6 +100,7 @@ if __name__ == "__main__":
     #
     # # Arrmul
     dir = directory + '/Arr'
+    os.makedirs(dir,exist_ok=True)
     name = f"{representation}_u_arrmul{N}"
     circuit = UnsignedArrayMultiplier(a, b, prefix=name)
     circuit.get_v_code_hier(open(f"{dir}/{name}.v", "w"))
@@ -110,6 +111,7 @@ if __name__ == "__main__":
 
     # Wallace
     dir = directory+'/Wallace'
+    os.makedirs(dir,exist_ok=True)
     name = f"{representation}_u_wallace_cla{N}"
     circuit = UnsignedWallaceMultiplier(a, b, prefix=name, unsigned_adder_class_name=UnsignedCarryLookaheadAdder)
     circuit.get_v_code_hier(open(f"{dir}/{name}.v", "w"))
@@ -144,6 +146,7 @@ if __name__ == "__main__":
     exit()
     # Dadda
     dir = directory + '/Dadda'
+    os.makedirs(dir,exist_ok=True)
     name = f"{representation}_u_dadda_cla{N}"
     circuit = UnsignedDaddaMultiplier(a, b, prefix=name, unsigned_adder_class_name=UnsignedCarryLookaheadAdder)
     circuit.get_v_code_hier(open(f"{dir}/{name}.v", "w"))
@@ -178,6 +181,7 @@ if __name__ == "__main__":
 
     # Arrdiv
     dir = directory + '/Div'
+    os.makedirs(dir,exist_ok=True)
     name = f"{representation}_arrdiv{N}"
     circuit = ArrayDivider(a, b, prefix=name)
     circuit.get_v_code_hier(open(f"{dir}/{name}.v", "w"))
