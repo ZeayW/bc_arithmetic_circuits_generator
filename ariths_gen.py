@@ -177,6 +177,7 @@ if __name__ == "__main__":
     # circuit.get_v_code_hier(open(f"{directory}/{name}.v", "w"))
 
     # Arrdiv
+    dir = directory + '/Div'
     name = f"{representation}_arrdiv{N}"
     circuit = ArrayDivider(a, b, prefix=name)
-    circuit.get_v_code_hier(open(f"{directory}/{name}.v", "w"))
+    circuit.get_v_code_hier(open(f"{dir}/{name}.v", "w"))
