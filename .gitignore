@@ -7,3 +7,5 @@ Makefile
 *.blif
 *.chr
 *__pycache__*
+*.xml
+*.iml
