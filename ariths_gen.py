@@ -99,7 +99,7 @@ if __name__ == "__main__":
     # circuit.get_v_code_hier(open(f"{directory}/{name}.v", "w"))
     #
     # # Arrmul
-        dir = directory + '/Arr'
+    dir = directory + '/Arr'
     name = f"{representation}_u_arrmul{N}"
     circuit = UnsignedArrayMultiplier(a, b, prefix=name)
     circuit.get_v_code_hier(open(f"{dir}/{name}.v", "w"))
