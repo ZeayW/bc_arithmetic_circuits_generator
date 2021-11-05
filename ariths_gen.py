@@ -54,7 +54,8 @@ import os
 
 """ Generation of circuits """
 if __name__ == "__main__":
-    N = 12
+    N = sys.argv[1]
+    #N = 12
     a = Bus(N=N, prefix="a")
     b = Bus(N=N, prefix="b")
     directory = "build"
