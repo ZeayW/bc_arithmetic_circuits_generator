@@ -58,48 +58,57 @@ if __name__ == "__main__":
     #N = 12
     a = Bus(N=N, prefix="a")
     b = Bus(N=N, prefix="b")
-    directory = "build"
+    directory = "build2"
     os.makedirs(directory, exist_ok=True)
 
     representation = "h"
 
     # # RCA
-    # name = f"{representation}_u_rca{N}"
-    # circuit = UnsignedRippleCarryAdder(a, b, prefix=name)
-    # circuit.get_v_code_hier(open(f"{directory}/{name}.v", "w"))
+    dir = directory + '/RCA'
+    os.makedirs(dir, exist_ok=True)
+    name = f"{representation}_u_rca{N}"
+    circuit = UnsignedRippleCarryAdder(a, b, prefix=name)
+    circuit.get_v_code_hier(open(f"{dir}/{name}.v", "w"))
     #
     # name = f"{representation}_s_rca{N}"
     # circuit = SignedRippleCarryAdder(a, b, prefix=name)
     # circuit.get_v_code_hier(open(f"{directory}/{name}.v", "w"))
     #
     # # RCA with PG
-    # name = f"{representation}_u_pg_rca{N}"
-    # circuit = UnsignedPGRippleCarryAdder(a, b, prefix=name)
-    # circuit.get_v_code_hier(open(f"{directory}/{name}.v", "w"))
+    dir = directory + '/PG_RCA'
+    os.makedirs(dir, exist_ok=True)
+    name = f"{representation}_u_pg_rca{N}"
+    circuit = UnsignedPGRippleCarryAdder(a, b, prefix=name)
+    circuit.get_v_code_hier(open(f"{dir}/{name}.v", "w"))
     #
     # name = f"{representation}_s_pg_rca{N}"
     # circuit = SignedPGRippleCarryAdder(a, b, prefix=name)
     # circuit.get_v_code_hier(open(f"{directory}/{name}.v", "w"))
     #
     # # CSKA with 4 bit CSKA blocks (default)
-    # name = f"{representation}_u_cska{N}"
-    # circuit = UnsignedCarrySkipAdder(a, b, prefix=name)
-    # circuit.get_v_code_hier(open(f"{directory}/{name}.v", "w"))
+    dir = directory + '/CSKA'
+    os.makedirs(dir, exist_ok=True)
+    name = f"{representation}_u_cska{N}"
+    circuit = UnsignedCarrySkipAdder(a, b, prefix=name)
+    circuit.get_v_code_hier(open(f"{dir}/{name}.v", "w"))
     #
     # name = f"{representation}_s_cska{N}"
     # circuit = SignedCarrySkipAdder(a, b, prefix=name)
     # circuit.get_v_code_hier(open(f"{directory}/{name}.v", "w"))
     #
     # # CLA with 4 bit CLA blocks (default)
-    # name = f"{representation}_u_cla{N}"
-    # circuit = UnsignedCarryLookaheadAdder(a, b, prefix=name)
-    # circuit.get_v_code_hier(open(f"{directory}/{name}.v", "w"))
+    dir = directory + '/CLA'
+    os.makedirs(dir, exist_ok=True)
+    name = f"{representation}_u_cla{N}"
+    circuit = UnsignedCarryLookaheadAdder(a, b, prefix=name)
+    circuit.get_v_code_hier(open(f"{dir}/{name}.v", "w"))
     #
     # name = f"{representation}_s_cla{N}"
     # circuit = SignedCarryLookaheadAdder(a, b, prefix=name)
     # circuit.get_v_code_hier(open(f"{directory}/{name}.v", "w"))
     #
     # # Arrmul
+    exit()
     dir = directory + '/Arr'
     os.makedirs(dir,exist_ok=True)
     name = f"{representation}_u_arrmul{N}"
